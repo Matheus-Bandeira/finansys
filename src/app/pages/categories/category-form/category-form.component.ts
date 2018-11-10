@@ -41,7 +41,7 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
     this.setPageTitle();
   }
 
-  submittingForm() {
+  submitForm() {
     this.submittingForm = true;
     if (this.currentAction === 'new') {
       this.createCategory();
@@ -102,7 +102,12 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
   }
 
   private updateCategory() {
-
+    const category: Category = Object.assign(new Category(), this.categoryForm.value);
+    this.categoryService.update(category)
+      .subscribe(
+        categoria => this.actionsForSuccess(categoria),
+        error => this.actionsError(error)
+      );
   }
 
   // redirect/reload component page
