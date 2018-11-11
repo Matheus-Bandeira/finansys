@@ -1,0 +1,15 @@
+.bg-primary {
+  background-color: #294e80 !important;
+}
+
+.table thead {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  background-color: #294e80 !important;
+}
+
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+}

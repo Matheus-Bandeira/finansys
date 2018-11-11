@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
+import {ButtonModule, DialogModule, CalendarModule} from 'primeng/primeng';
+import {IMaskModule} from 'angular-imask';
 
-import { EntriesRoutingModule } from './entries-routing.module';
+import {EntriesRoutingModule} from './entries-routing.module';
 import {EntryListComponent} from './entry-list/entry-list.component';
 import {EntryFormComponent} from './entry-form/entry-form.component';
 
@@ -11,7 +13,13 @@ import {EntryFormComponent} from './entry-form/entry-form.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    EntriesRoutingModule
-  ]
+    EntriesRoutingModule,
+    CalendarModule,
+    DialogModule,
+    ButtonModule,
+    IMaskModule
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class EntriesModule { }
+export class EntriesModule {
+}
