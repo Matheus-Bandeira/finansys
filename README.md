@@ -1,4 +1,8 @@
 # Finansys
+O Finansys é um sistema de gerenciamento financeiro pessoal, voltado para pessoas que desejam ter um melhor controle sobre seus gastos.  
+
+
+# Angular
 
 O projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) versão 7.0.4.
 
@@ -7,7 +11,7 @@ O projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli)
 Execute `ng serve`. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Execute `ng generate component component-name` para gerar um novo componente, você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
