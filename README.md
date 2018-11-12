@@ -1,7 +1,7 @@
 # Finan$ys
 <img src="https://camo.githubusercontent.com/17dcc1f97c97ed3f890c9121dc5e9a4019ff6d77/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f76657273696f6e2d312e322e332d626c75652e7376673f6d61784167653d32353932303030" alt="version" data-canonical-src="https://img.shields.io/badge/version-1.2.3-blue.svg?maxAge=2592000" style="max-width:100%;">
 
-O Finansys é um sistema de gerenciamento financeiro pessoal, voltado para pessoas que desejam ter um melhor controle sobre seus gastos.  
+O Finan$ys é um sistema de gerenciamento financeiro pessoal, voltado para pessoas que desejam ter um melhor controle sobre seus gastos.  
 
 # Angular
 
