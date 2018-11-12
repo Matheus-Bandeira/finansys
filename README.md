@@ -25,7 +25,7 @@ Execute `ng test` para executar os testes unitários via [Karma] (https://karma-
 Execute `ng e2e` para executar os testes de ponta a ponta via [Protractor] (http://www.protractortest.org/).
 
 ## surge
-Para quem deseja testar a apliacação basta instalar o surge `https://surge.sh/` e fazer o deply.
+Para quem deseja testar a apliacação basta instalar o surge `https://surge.sh/` e fazer o deploy.
 
 ## Ajuda adicional
 
