@@ -24,6 +24,9 @@ Execute `ng test` para executar os testes unitários via [Karma] (https://karma-
 
 Execute `ng e2e` para executar os testes de ponta a ponta via [Protractor] (http://www.protractortest.org/).
 
+## surge
+Para quem deseja testar a apliacação basta instalar o surge `https://surge.sh/` e fazer o deply.
+
 ## Ajuda adicional
 
 Para obter mais ajuda sobre o Angular CLI, use `ng help` ou vá conferir o [Angular CLI README] (https://github.com/angular/angular-cli/blob/master/README.md).
