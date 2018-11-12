@@ -1,4 +1,4 @@
-# Finansys
+# Finan$ys
 O Finansys é um sistema de gerenciamento financeiro pessoal, voltado para pessoas que desejam ter um melhor controle sobre seus gastos.  
 
 
