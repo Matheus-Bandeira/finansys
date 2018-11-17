@@ -4,11 +4,13 @@ import {ActivatedRoute, Router} from '@angular/router';
 
 import {Entry} from '../shared/entry.module';
 import {EntryService} from '../shared/entry.service';
+import {CategoryService} from '../../categories/shared/category.service';
 
 import {switchMap} from 'rxjs/operators';
 
 import * as toastr from 'toastr';
 import {element} from 'protractor';
+import {Category} from '../../categories/shared/category.module';
 
 @Component({
   selector: 'app-entry-form',
@@ -23,6 +25,7 @@ export class EntryFormComponent implements OnInit, AfterContentChecked {
   serverErrorMessages: string[] = null;
   submittingForm = false;
   entry: Entry = new Entry();
+  categories: Array<Category>;
 
   public imaskConfig = {
     mask: Number,
@@ -43,19 +46,21 @@ export class EntryFormComponent implements OnInit, AfterContentChecked {
     monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
     today: 'Hoje',
     clear: 'Limpar'
-  }
+  };
 
   constructor(
     private entryService: EntryService,
     private route: ActivatedRoute,
     private router: Router,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private categoryService: CategoryService
   ) { }
 
   ngOnInit() {
     this.serCurrentAction();
     this.buidEntryForm();
     this.loadEntry();
+    this.loadCategories();
   }
 
   ngAfterContentChecked() {
@@ -69,6 +74,17 @@ export class EntryFormComponent implements OnInit, AfterContentChecked {
     } else {
       this.updateEntry();
     }
+  }
+
+  get typeOptions(): Array<any> {
+    return Object.entries(Entry.types).map(
+      ([value, text]) => {
+        return {
+          text: text,
+          value: value
+        };
+      }
+    );
   }
 
   // PRIVATE METHODS
@@ -107,6 +123,12 @@ export class EntryFormComponent implements OnInit, AfterContentChecked {
         }
       );
     }
+  }
+
+  private loadCategories () {
+    this.categoryService.getAll().subscribe(
+      categories => this.categories = categories
+    );
   }
 
   private setPageTitle() {
