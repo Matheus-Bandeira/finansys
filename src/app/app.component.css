@@ -2,6 +2,10 @@
   background-color: #294e80 !important;
 }
 
+.text-light {
+  color: red !important;
+}
+
 .table thead {
   vertical-align: bottom;
   border-bottom: 2px solid #dee2e6;
